@@ -1,15 +1,16 @@
-//
-//  MapView.swift
-//  cinema
-//
-//  Created by Данил Уваров on 12.08.2024.
-//
-
 import SwiftUI
+import MapKit
 
 struct MapView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Map(initialPosition: .region(region))
+    }
+    private var region: MKCoordinateRegion{
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 56.298696, longitude: 39.381563),
+            span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        )
+        
     }
 }
 
